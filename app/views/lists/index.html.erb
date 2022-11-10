@@ -1,0 +1,12 @@
+<div class="cards mt-4">
+  <% @lists.each do |list| %>
+    <div class="card-tile">
+      <h2><%= link_to list.name, list_path(list) %></h2>
+      <div class="card-options">
+        <%= link_to list_path(list), data: { turbo_method: 'delete', turbo_confirm: "Delete List: #{list.name}?" }, class: 'btn btn-light' do %>
+          <i class="fa-solid fa-trash"></i>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

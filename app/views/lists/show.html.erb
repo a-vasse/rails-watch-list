@@ -1,0 +1,15 @@
+<div class="container mt-3">
+ <h2 id="list-title"><%= @list.name %></h2>
+
+  <% @list.bookmarks.each do |bookmark| %>
+    <div class="movie-card mb-4">
+      <%= image_tag bookmark.movie.poster_url %>
+      <div class="movie-card-infos">
+        <%= bookmark.comment %>
+      </div>
+    </div>
+  <% end %>
+
+
+<%= link_to "Back to Lists", lists_path %></h2>
+</div>

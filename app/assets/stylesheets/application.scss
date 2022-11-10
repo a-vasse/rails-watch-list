@@ -1,0 +1,151 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.banner {
+  position: relative;
+  background-image: image-url("titlebanner.png");
+  background-repeat: no-repeat;
+  background-color: #6dd1b6;
+  height: 200px;
+  display: flex;
+  background-position: center;
+  justify-content:center;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+#banner-title {
+  font-family: Six Caps;
+  color: #ffffff;
+  text-shadow: 2px 2px #404040;
+  font-size: 128px
+ }
+
+ #list-title {
+  font-family: Six Caps;
+  justify-content: center;
+  font-size: 48px;
+  text-align: center;
+ }
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 24px;
+  justify-content: center;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.card-tile {
+  position: relative;
+  background-image: asset-url("tile.png");
+  height:100px;
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-tile a {
+  color: #003886e7;
+  text-decoration: none;
+  font-family: Six Caps;
+  font-size: 64px;
+}
+
+.card-tile a:hover {
+  color: #1275ffe7;
+}
+
+.card-options {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  a {
+    font-size: 16px;
+  }
+}
+
+.footer {
+  background: #5f5df1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  padding: 0px 50px;
+  color: #ffffffe7;
+  flex-shrink: 0;
+}
+
+.movie-card {
+  overflow: hidden;
+  height: 375px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.movie-card img {
+  height: 100%;
+  width: 250px;
+  object-fit: cover;
+}
+
+.movie-card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.movie-card p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.movie-card .movie-card-infos {
+  padding: 16px;
+}
