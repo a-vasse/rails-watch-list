@@ -68,8 +68,8 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 
-  gem 'cloudinary', '~> 1.16.0'
-end
 
+end
+gem 'cloudinary', '~> 1.16.0'
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
