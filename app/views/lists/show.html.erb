@@ -6,6 +6,7 @@
   <% @list.bookmarks.each_with_index do |bookmark, index| %>
     <div class="carousel-item <%= "active" if  index.zero? %>">
         <%= image_tag bookmark.movie.poster_url, width: 250, height: 400, class:"d-block" %>
+        <%= bookmark.comment %>
     </div>
   <% end %>
 
