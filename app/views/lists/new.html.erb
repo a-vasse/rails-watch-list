@@ -1,5 +1,6 @@
   <%= simple_form_for @list do |f| %>
     <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit class: 'btn btn-light m-2' %>
     <%= link_to 'Back to Main', lists_path, class: 'btn btn-light m-2' %>
   <% end %>
