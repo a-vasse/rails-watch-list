@@ -15,6 +15,7 @@
 
 html, body {
   height: 100%;
+  background-color: #c7c7ec;
 }
 
 body {
@@ -31,7 +32,7 @@ body {
   background-image: image-url("titlebanner.png");
   background-repeat: no-repeat;
   background-color: #6dd1b6;
-  height: 200px;
+  height: 150px;
   display: flex;
   background-position: center;
   justify-content:center;
@@ -46,19 +47,12 @@ body {
   font-family: Six Caps;
   color: #ffffff;
   text-shadow: 2px 2px #404040;
-  font-size: 128px
- }
-
- #list-title {
-  font-family: Six Caps;
-  justify-content: center;
-  font-size: 48px;
-  text-align: center;
+  font-size: 8vw;
  }
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 24px;
   justify-content: center;
   width: 85%;
@@ -69,7 +63,7 @@ body {
   position: relative;
   background-size: cover;
   background-position: center;
-  height: 180px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,25 +71,28 @@ body {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  opacity: 50%;
+  transition: 0.3s
+}
+
+.card-tile:hover {
+  opacity: 100%;
+  scale: 1.02;
+  transition: 0.3s
 }
 
 .card-tile a {
-  color: #003886e7;
+  color: #d7d7d7e7;
   text-decoration: none;
   font-family: Six Caps;
-  font-size: 64px;
+  font-size: 5vw;
 }
-
-.card-tile a:hover {
-  color: #1275ffe7;
-}
-
 .card-options {
   display: flex;
   gap: 8px;
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 8px;
+  right: 8px;
 
   a {
     font-size: 16px;
@@ -116,16 +113,16 @@ body {
 
 .movie-card {
   overflow: hidden;
-  height: 375px;
+  width: 400px;
+  height: 550px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
   align-items: center;
 }
 
 .movie-card img {
-  height: 100%;
-  width: 250px;
+  height: 550px;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -145,4 +142,57 @@ body {
 
 .movie-card .movie-card-infos {
   padding: 16px;
+}
+
+.form-card {
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 8px;
+}
+
+
+.btn-list {
+  border-radius: 4px;
+  background-color: #6f62f8;
+  color: #ffffff;
+  padding: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.btn-list:after {
+  content: '➲';
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: 14px;
+  transition: 0.3s;
+}
+
+.btn-list:hover {
+  padding-right: 48px;
+  padding-left: 8px;
+}
+
+.btn-list:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+.card-options {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  a {
+    font-size: 16px;
+  }
 }
